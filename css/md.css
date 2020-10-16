@@ -1,0 +1,65 @@
+h1 {
+    color: rgb(226, 226, 226);
+}
+
+a {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+code {
+    background-color: #1b1d23;
+    color: #af6161;
+}
+
+
+hr {
+    background-color: #555;
+}
+
+blockquote {
+    border-color: #181a1f;
+}
+
+img {
+    background-color: transparent;
+}
+
+code,
+tt {
+    background-color: #1b1d23;
+    color: #e83e8c;
+    font-size: 16px;
+    padding: 0.25%;
+    border-radius: 4px;
+}
+
+.highlight pre,
+pre {
+    background-color: #1b1d23;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+pre code {
+    color: rgb(157, 165, 180);
+}
+
+table tr {
+    background-color: #222222;
+    border-color: #181a1f;
+}
+
+table :nth-child(2n) {
+    background-color: #090705;
+    border-color: #181a1f;
+}
+
+table td th {
+    border-color: #181a1f;
+}

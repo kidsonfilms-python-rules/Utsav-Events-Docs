@@ -1,0 +1,284 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #14141b;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(51, 51, 51);
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+body {
+    background-color: rgb(14, 14, 14);
+    color: rgb(226,226,226);
+    overflow-y: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    background-color: #5d4954;
+}
+
+.logo {
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-around;
+    width: 50%;
+    z-index: 100;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226,226,226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 95vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+      opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+
+}
+
+.row {
+    display: flex;
+}
+
+.sidebarDiv {
+    width: 200px;
+  background: rgb(34, 34, 34);
+  padding: 1%;
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+#sidebar {
+    list-style: none;
+}
+
+#sidebar li>a {
+    text-decoration: none;
+    color: rgb(226,226,226);
+    padding: 4%;
+}
+
+#sidebar li>a:hover {
+    color: rgb(248, 248, 248);
+    text-decoration: solid;
+}
+
+.main {
+    flex: 1;
+    padding: 1%;
+    height: 95vh;
+    overflow-y: scroll;
+}
+
+.page {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 100%;
+  /* border: 2px dashed #f69c55; */
+}
+.center {
+    display: table-cell;
+  vertical-align: middle;
+}
+
+.center h1 {
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 50px;
+}
+
+.center h2 {
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: aliceblue;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid rgb(56, 56, 56);
+    margin: 5px;
+}
+
+.social-row {
+    background-color: rgb(8, 8, 8);
+    border: 2px solid rgb(56, 56, 56);
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+hr.rounded {
+    border-top: 2px solid rgb(226,226,226);
+    border-radius: 1px;
+    margin: 0px;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+}
+
+
+code {
+    background-color: #1b1d23;
+    color: #af6161;
+    font-size: 14px;
+}
+
+
+hr {
+    background-color: #555;
+}
+
+blockquote {
+    border-color: #181a1f;
+}
+
+img {
+    background-color: transparent;
+}
+
+code,
+tt {
+    background-color: #1b1d23;
+    color: #e83e8c;
+    font-size: 14px;
+}
+
+.highlight pre,
+pre {
+    background-color: #1b1d23;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+pre code {
+    color: rgb(157, 165, 180);
+}
+
+table tr {
+    background-color: #222222;
+    border-color: #181a1f;
+}
+
+table :nth-child(2n) {
+    background-color: #090705;
+    border-color: #181a1f;
+}
+
+table td th {
+    border-color: #181a1f;
+}
